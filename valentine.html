@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Чамдаа 💖</title>
+  <style>
+    body{
+      margin:0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color:white;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      text-align:center;
+    }
+    .card{
+      background: rgba(255,255,255,0.15);
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+      max-width:400px;
+    }
+    h1{font-size:2.2rem;margin-bottom:10px;}
+    p{font-size:1.1rem;line-height:1.6;}
+    button{
+      margin-top:20px;
+      padding:12px 24px;
+      border:none;
+      border-radius:30px;
+      background:#fff;
+      color:#ff4d6d;
+      font-size:1rem;
+      cursor:pointer;
+    }
+    button:hover{opacity:0.9;}
+    .hidden{display:none;}
+    .video-strip{
+      width:100%;
+      overflow:hidden;
+      border-radius:20px;
+      margin-bottom:20px;
+    }
+    .track{
+      display:flex;
+      width:calc(300px * 8);
+      animation:scroll 20s linear infinite;
+    }
+    .track img{
+      width:300px;
+      height:200px;
+      object-fit:cover;
+      margin-right:10px;
+      border-radius:15px;
+    }
+    @keyframes scroll{
+      0%{transform:translateX(0)}
+      100%{transform:translateX(-50%)}
+    }
+</style>
+</head>
+<body>
+<audio controls>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+  <div class="card">
+    <div class="video-strip">
+    <div class="track">
+      <img src="img1.jpg"><img src="img2.jpg"><img src="img3.jpg"><img src="img4.jpg">
+      <img src="img5.jpg"><img src="img6.jpg"><img src="img7.jpg"><img src="img8.jpg">
+      <img src="img9.jpg"><img src="img10.jpg"><img src="img11.jpg"><img src="img12.jpg">
+      <img src="img13.jpg"><img src="img14.jpg"><img src="img15.jpg"><img src="img16.jpg">
+      <img src="img17.jpg">
+      <img src="img1.jpg"><img src="img2.jpg"><img src="img3.jpg"><img src="img4.jpg">
+      <img src="img5.jpg"><img src="img6.jpg"><img src="img7.jpg"><img src="img8.jpg">
+      <img src="img9.jpg"><img src="img10.jpg"><img src="img11.jpg"><img src="img12.jpg">
+      <img src="img13.jpg"><img src="img14.jpg"><img src="img15.jpg"><img src="img16.jpg">
+      <img src="img17.jpg">
+    </div>
+    <p class="mid-text">Өнгөрсөн цаг хугацаанд<br>аз жаргал бэлэглэсэнд маш их баярлалаа 🤍<br><br>Чамдаа хязгааргүй их хайртай шүү 💞</p>
+    <p class="end-text">Бидний аялал дуусаагүй шүү…<br><strong>to be continued 🫶🏻</strong></p>
+    <h1>Хайрт Анар-Эрдэнэ чамдаа</h1>
+    <p>Гэгээн хайрын Валентины мэнд хүргэе 💖</p>
+    <button onclick="showLove()">Дарж үз 💌</button>
+    <p id="loveText" class="hidden">Чи миний инээмсэглэл, миний аз жаргал. 
+    Чамтай хамт байх ирээдүйгээ л би хүсдэг 💖</p>
+      </div>
+    <script>
+    function showLove(){
+      document.getElementById('loveText').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
