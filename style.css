@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+section {
+  display: none;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.active { display: block; }
+
+button {
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  background: pink;
+  font-size: 16px;
+}
+
+.fade {
+  animation: fadeUp 2s forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#photo {
+  max-width: 90%;
+  border-radius: 20px;
+  animation: zoom 1.5s infinite alternate;
+}
+
+@keyframes zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+.emoji {
+  font-size: 80px;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px pink; }
+  to { text-shadow: 0 0 40px hotpink; }
+}
+
+.gift {
+  background: #222;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.gift .icon {
+  font-size: 40px;
+  display: block;
+}
+
+.gift.selected {
+  background: hotpink;
+}
